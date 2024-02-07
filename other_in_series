@@ -1,0 +1,5 @@
+import pandas as pd
+data = pd.Series(['sai', 'varshi', 'sai', 'santhosh', 'varshi', 'sai', 'santhosh', 'heman'])
+most_frequent_value = data.value_counts().idxmax()
+data.replace(to_replace=data[data != most_frequent_value].unique(), value='other', inplace=True)
+print(data)
