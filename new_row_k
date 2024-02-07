@@ -1,0 +1,16 @@
+import pandas as pd
+data = {
+    'Student': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Attempts': [1, 3, 2, 4],
+    'Score': [80, 65, 90, 75]
+}
+
+exam_data = pd.DataFrame(data)
+print("Original DataFrame:")
+print(exam_data)
+new_row_values = {'Student': 'Eve', 'Attempts': 2, 'Score': 85}
+exam_data = exam_data.append(new_row_values, ignore_index=True)
+print("\nDataFrame after appending the new row:")
+print(exam_data)
+exam_data = exam_data.drop(index=exam_data[exam_data['Student'] == 'Eve'].index)
+print(exam_data)
