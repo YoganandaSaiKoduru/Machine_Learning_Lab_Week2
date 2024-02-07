@@ -1,0 +1,7 @@
+import pandas as pd
+data = {'A': 10, 'B': 20, 'C': 30, 'D': 40, 'E': 50}
+original_series = pd.Series(data)
+condition = original_series > 30
+subset_series = original_series[condition]
+print(original_series)
+print(subset_series)
