@@ -1,0 +1,5 @@
+import pandas as pd
+data = pd.Series(['sai', 'varshi', 'santhosh', 'heman'])
+word_lengths = data.str.split().apply(lambda x: [len(word) for word in x])
+print(data)
+print(word_lengths)
