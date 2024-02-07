@@ -1,0 +1,5 @@
+import numpy as np
+data_array = np.array([1.0, 2.0, np.nan, 4.0, np.nan, 6.0])
+missing_mask = np.isnan(data_array.astype(float))
+missing_indices = data_array[missing_mask]
+print( missing_indices)
