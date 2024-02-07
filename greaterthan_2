@@ -1,0 +1,11 @@
+import pandas as pd
+data = {
+    'Student': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Attempts': [1, 3, 2, 4],
+    'Score': [80, 65, 90, 75]
+}
+
+exam_data = pd.DataFrame(data)
+selected_rows = exam_data[exam_data['Attempts'] > 2]
+print(exam_data)
+print(selected_rows)
